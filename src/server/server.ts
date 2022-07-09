@@ -1,14 +1,16 @@
 import 'source-map-support/register'
 
 import express from 'express'
+import { Server } from 'socket.io'
+import http from 'http'
+
 import helmet from 'helmet'
 import compression from 'compression'
 import path from 'path'
 
 const app = express()
-const server = require('http').Server(app)
-import SocketIOStatic from 'socket.io'
-const io = SocketIOStatic(server)
+const server = http.createServer(app)
+const io = new Server(server)
 
 import RoomManager from './managers/roomManager'
 import Routes from './routes/routes'
