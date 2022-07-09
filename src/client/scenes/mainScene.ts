@@ -52,7 +52,7 @@ export default class MainScene extends Phaser.Scene {
     let levelText = this.add
       .text(0, 0, `Level ${this.level + 1}`, {
         color: '#ffffff',
-        fontSize: 42
+        fontSize: String(42)
       })
       .setOrigin(0.5, 0)
       .setDepth(100)

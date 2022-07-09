@@ -25,7 +25,9 @@ const ioStats = new IoStats(ioNspStats)
 const roomManager = new RoomManager(ioNspGame, ioStats)
 const ioGame = new IoGame(ioNspGame, ioStats, roomManager)
 
-app.use(helmet())
+app.use(helmet({
+  contentSecurityPolicy: false,
+}))
 app.use(compression())
 
 app.use('/static', express.static(path.join(__dirname, '../')))

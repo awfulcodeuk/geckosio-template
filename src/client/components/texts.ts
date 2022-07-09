@@ -38,7 +38,7 @@ export default class Texts {
       let theText = scene.add
         .text(scene.cameras.main.width / 2, text.y, '', {
           color: '#ffffff',
-          fontSize: text.fontSize
+          fontSize: String(text.fontSize)
         })
         .setOrigin(0.5)
         .setResolution(window.devicePixelRatio)

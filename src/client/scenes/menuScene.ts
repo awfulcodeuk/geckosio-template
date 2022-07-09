@@ -15,7 +15,7 @@ export default class MenuScene extends Phaser.Scene {
     const styles = {
       color: '#000000',
       align: 'center',
-      fontSize: 52
+      fontSize: String(52)
     }
 
     let texts: any[] = []

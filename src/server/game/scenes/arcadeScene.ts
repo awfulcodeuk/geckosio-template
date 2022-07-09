@@ -77,7 +77,7 @@ export default class MainScene extends Phaser.Scene {
     if (PHYSICS_DEBUG) {
       this.add
         .text(24, 24, 'Physics Debugging Version\nMove with Arrow Keys', {
-          fontSize: 36
+          fontSize: String(36)
         })
         .setScrollFactor(0)
         .setOrigin(0)
